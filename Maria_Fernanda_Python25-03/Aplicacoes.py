@@ -34,7 +34,53 @@ for i in range (len(frutas)):
     if achado:
         break
 if achado:
-    print("elemneto encontrado no indice: ", i)
+    print("elemento encontrado no indice: ", i)
 else:
     print("Elemento não encontrado!!!")  
+
+#Conferidor de aposta em loteria 
+sorteados = [5, 11, 9, 42, 3, 49]
+apostados = [3, 7, 11, 42, 34, 49]
+acertos = 0 
+
+for numero in sorteados:
+    if numero in apostados:
+        acertos += 1
+print("A quantidade de acertos foi de: ", acertos)
+
+#Remoção de números repetidos em uma lista 
+lista = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
+print("Lista original: ", lista)
+
+#lista de apoio
+vistos = []
+
+#Iterar pela lista original de trás para frente 
+for i in range(len(lista) -1, -1, -1):
+    # Se o número já está na lista "vistos", removelo da lista original 
+    if lista[i] in vistos:
+        del lista[i]
+    else:
+        #Caso contrário, adicionar à lista "vistos"
+        vistos.append(lista[i])
+print("lista modificada: ", lista)
+
+#Listas avançadas 
+#2D - listas aninhadas bidimensionais 
+tabela = [[":(", ":)", ":|", ";-;"], [";-:", ":|", ":)", ":("], [":|", ":)", ";-;", ":("]]
+print(tabela[0][3])# Motrar o index de uma matriz
+print(tabela[2][2])
+print(tabela)
+
+#3D - TRIDIMENSIONAL 
+cubo = [ [[":(", "y", "z"], [":)", "y", "z"], [":|", "y", "z"]], 
+    [["Amor", "Ódio", "Caridade"], ["Paz", "Esperaça", "Férias"], ["tina", "Prior", "pp"]],  
+    [["Restinga", "Patrocinio", "Rifaina"], ["Amazonense", "Fluminense", "Santos"], ["Pizza", "Lasanha", "Pastel"]] ]
+
+print(cubo)
+print(cubo[1])
+print(cubo[1][0])
+print(cubo[1][0][2])
+
+
 time.sleep(3)
